@@ -1,6 +1,6 @@
 # ARCVM
 
-A minimal bytecode virtual machine
+A minimal bytecode virtual machine written in C++
 
 This is the back-end for programming language called ARCANE (https://github.com/BrandonKi/ARCANE)
 
@@ -13,3 +13,17 @@ https://docs.google.com/spreadsheets/d/1RJZBzq33wgM4W4Zc3TOtNXXqJP57WYDpCWftLpLd
 bytecode file format described below
 
 #@TODO ADD FILE FORMAT DESCRIPTION#
+
+# HOW TO BUILD
+
+install and run Cmake with the compiler of your choice
+```
+cmake .
+```
+
+then run with your preffered compiler and pass in the 
+name of your bytecode file as a command line argument
+
+# NOTES 
+
+replace reintrpret cast with safe version (memcpy or bitcast(c++20))
