@@ -11,4 +11,4 @@ add_executable(ARCVM ${VM_SOURCES})
 
 target_compile_definitions(ARCVM PRIVATE DEBUG_BUILD)
 
-target_include_directories(ARCVM PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/ARCVM/include)
+target_include_directories(ARCVM PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
