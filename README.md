@@ -1,1 +1,15 @@
 # ARCVM
+
+A minimal bytecode virtual machine
+
+This is the back-end for programming language called ARCANE (https://github.com/BrandonKi/ARCANE)
+
+However the front-end is currently being rewritten
+
+full instruction set documented below
+
+https://docs.google.com/spreadsheets/d/1RJZBzq33wgM4W4Zc3TOtNXXqJP57WYDpCWftLpLdmg8/edit?usp=sharing
+
+bytecode file format described below
+
+#@TODO ADD FILE FORMAT DESCRIPTION#
