@@ -2,7 +2,7 @@
 
 A minimal bytecode virtual machine written in C++
 
-This is the back-end for programming language called ARCANE (https://github.com/BrandonKi/ARCANE)
+This is the back-end for a programming language called ARCANE (https://github.com/BrandonKi/ARCANE)
 
 However the front-end is currently being rewritten
 
@@ -21,7 +21,7 @@ install and run Cmake with the compiler of your choice
 cmake .
 ```
 
-then run with your preffered compiler and pass in the 
+then run with that compiler and pass in the 
 name of your bytecode file as a command line argument
 
 # NOTES 
