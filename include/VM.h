@@ -76,7 +76,7 @@ public:
     void printProgram(u8*);
     inline u8* getProgram(){return m_data;}
     void run();
-    void freeMem();
+    void freeMem();     @TODO implement
 
 private:
     inline void NOP(){
@@ -88,7 +88,7 @@ private:
         if(!m_stack.empty())
             EXIT_CODE = m_stack.back().data;
     }
-    inline void RET(){                       // IMPLEMENT ME
+    inline void RET(){
         MNEMONIC("RET");
         container result = m_stack.back();
         u32 end_frame = m_lclptr;
@@ -221,7 +221,7 @@ private:
                 *(u64*)temp = length;
                 m_stack.push_back({_REF_, (u64)(double*)temp});
                 break;
-            case _STRING_:
+            case _STR_:
                 
                 break;
             case _REF_:

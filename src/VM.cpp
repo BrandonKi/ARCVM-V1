@@ -348,7 +348,7 @@ void VM::printStack(){
 			case _DOUBLE_:
 				std::cout << *reinterpret_cast<double*>(&result.back().data) << "\n";
 				break;
-			case _STRING_:
+			case _STR_:
 				std::cout << "0x" << std::hex << result.back().data << std::dec << "\n";
 				break;
 			case _REF_:

@@ -89,9 +89,6 @@
 #define _JIFNZ_ 0xf7
 
 
-
-
-
 #define _NULL_ 0
 #define _SBYTE_ 1
 #define _UBYTE_ 2
@@ -99,7 +96,7 @@
 #define _UINT_ 4
 #define _FLOAT_ 5
 #define _DOUBLE_ 6
-#define _STRING_ 7
+#define _STR_ 7
 #define _REF_ 8
 #define _UNDEFINED_ 9
 #define _FRAME_ 10
