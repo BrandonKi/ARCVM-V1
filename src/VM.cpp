@@ -3,7 +3,7 @@
 VM::VM(char* data, u64 size)
 	:m_size(size), m_memptr(0), m_lclptr(0), m_frameptr(0)
 {
-	m_data = reinterpret_cast<u8*>(data);
+	m_data = reinterpret<u8*>(data);
 
 	functionTable_len = m_data[0];
 	int last_len = 0;
@@ -25,7 +25,6 @@ VM::VM(char* data, u64 size)
 
 	m_variableTable = (container*)malloc(sizeof(container) * 10);   			// temp
 	
-
 	// printVariableTable();
 }
 
@@ -59,10 +58,10 @@ void VM::run(){
 	}
 
 	// unsigned char temp[] = {0xaa, 0xee, 0xee, 0xee}; // Little Endian
-	// uint* tempptr = reinterpret_cast<uint*>(temp);						Example version
+	// uint* tempptr = reinterpret<uint*>(temp);						Example version
 	// logn((uint)*tempptr);
 
-	// uint tempptr2 = *reinterpret_cast<uint*>(&m_data[0]);    			Usable version
+	// uint tempptr2 = *reinterpret<uint*>(&m_data[0]);    			Usable version
 
 	EXIT_MSG(std::dec << (int)EXIT_CODE);
 }
@@ -80,7 +79,7 @@ u8* VM::getNextByte(){
 }
 
 // uint VM::getNextFourBytes(){
-// 	return reinterpret_cast<uint>(((uint)m_data[++m_memptr]<<24) | ((uint)m_data[++m_memptr]<<16) | ((uint)m_data[++m_memptr]<<8) | (uint)m_data[++m_memptr]);
+// 	return reinterpret<uint>(((uint)m_data[++m_memptr]<<24) | ((uint)m_data[++m_memptr]<<16) | ((uint)m_data[++m_memptr]<<8) | (uint)m_data[++m_memptr]);
 // }
 
 void VM::executeInstruction(){
@@ -337,16 +336,16 @@ void VM::printStack(){
 				std::cout << (result.back().data & 0xff) << "\n";
 				break;
 			case _SINT_:
-				std::cout << *reinterpret_cast<sint*>(&result.back().data) << "\n";
+				std::cout << *reinterpret<sint*>(&result.back().data) << "\n";
 				break;
 			case _UINT_:
 				std::cout << result.back().data << "\n";
 				break;
 			case _FLOAT_:
-				std::cout <<  *reinterpret_cast<float*>(&result.back().data) << "\n";
+				std::cout <<  *reinterpret<float*>(&result.back().data) << "\n";
 				break;
 			case _DOUBLE_:
-				std::cout << *reinterpret_cast<double*>(&result.back().data) << "\n";
+				std::cout << *reinterpret<double*>(&result.back().data) << "\n";
 				break;
 			case _STR_:
 				std::cout << "0x" << std::hex << result.back().data << std::dec << "\n";
