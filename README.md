@@ -4,6 +4,8 @@ Moved from the BrandonKi/ARCANE
 
 A minimal bytecode virtual machine written in C++
 
+has a seperate instruction set from BrandonKi/ARCVM-V2
+
 This is the back-end for a programming language called ARCANE (https://github.com/BrandonKi/ARCANE)
 
 However the front-end is currently being rewritten
