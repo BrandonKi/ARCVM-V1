@@ -1,6 +1,8 @@
 # ARCVM V1
 
-Moved from the BrandonKi/ARCANE 
+Moved from the BrandonKi/ARCANE
+
+Has a different instruction set than ARCVM-V2 https://github.com/BrandonKi/ARCVM-V2
 
 A minimal bytecode virtual machine written in C++
 
